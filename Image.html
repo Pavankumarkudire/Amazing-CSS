@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+
+        }
+
+        .Child {
+            display: flex;
+            position: relative;
+            background-color: #e23d29;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            z-index: -1;
+            margin-top: 10px;
+
+        }
+
+        .Child1 {
+            display: flex;
+            position: relative;
+            background-color: #f4ba0e;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            z-index: -1;
+            margin-left: -3px;
+            margin-top: -9px;
+
+        }
+
+        .Child2 {
+            display: flex;
+            position: relative;
+            background-color: #9ac93b;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            z-index: -1;
+            margin-left: -4px;
+            margin-top: 10px;
+
+        }
+
+        .InnerChild {
+            position: absolute;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            border: 4px solid black;
+            margin-left: -90px;
+            margin-top: 15px;
+
+        }
+
+        .InnerChild1 {
+            position: absolute;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: 4px solid black;
+            /* margin-left: 56px; */
+            margin-top: -15px;
+
+        }
+
+        .InnerChild2 {
+            position: absolute;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            border: 4px solid black;
+            margin-left: 90px;
+            margin-top: 15px;
+
+        }
+
+        .Parent1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .PChild{
+            display: flex;
+            position: relative;
+            background-color: brown;
+            width: 70px;
+            height: 100px;
+            border-radius: 50%;
+            z-index: -1;
+            margin-left: 10px;
+        }
+        .PChild1{
+            display: flex;
+            position: relative;
+            background-color: #f4ba0e;
+            width: 70px;
+            height: 100px;
+            border-radius: 50%;
+            margin-left: -10px;
+        }.PChild2{
+            display: flex;
+            position: relative;
+            background-color: #9ac93b;
+            width: 70px;
+            height: 100px;
+            border-radius: 50%;
+            margin-left: -15px;
+        }
+        .PInnerChald{
+            position: absolute;
+            width: 55px;
+            height: 80px;
+            border: 4px solid black;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            margin-left: -90px;
+            border-bottom: none;
+            
+        }
+        .PInnerChald1{
+            position: absolute;
+            width: 55px;
+            height: 90px;
+            border: 4px solid black;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            margin-top: -10px;
+            border-bottom-style: none;
+        }.PInnerChald2{
+            position: absolute;
+            width: 55px;
+            height: 80px;
+            border: 4px solid black;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            margin-left: 90px;
+            border-bottom: none;
+        }
+        .PInnerChald3{
+            float: top;
+            position: absolute;
+            border: 4px solid black;
+            width: 212px;
+            height: 40px;
+            border-radius: 50%;
+            margin-top: -10px;
+            border-top-style: none;
+        }
+        .Border{
+            border: 2px solid black;
+            position: absolute;
+            width: 40px;
+            bottom: 0%;
+        }
+        .Border1{
+            border: 2px solid black;
+            position: absolute;
+            width: 27px;
+            bottom: 0%;
+            left: 13px;
+        }
+        .Border2{
+            border: 2px solid black;
+            position: absolute;
+            width: 40px;
+            bottom: 0%;
+            left: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Parent">
+        <div class="Child"></div>
+        <div class="Child1"></div>
+        <div class="Child2"></div>
+        <div class="InnerChild"></div>
+        <div class="InnerChild1"></div>
+        <div class="InnerChild2"></div>
+    </div>
+    <div class="Parent1">
+        <div class="PChild"></div>
+        <div class="PChild1"></div>
+        <div class="PChild2"></div>
+        <div class="PInnerChald">
+            <span class="Border"></span>
+        </div>
+        <div class="PInnerChald1">
+            <span class="Border1"></span>
+        </div>
+        <div class="PInnerChald2">
+            <span class="Border2"></span>
+        </div>
+        <div class="PInnerChald3"></div>
+    </div>
+
+</body>
+
+</html>
