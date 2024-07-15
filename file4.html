@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Grand_Parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .Parent {
+            position: relative;
+            background-color: 5px solid black;
+        }
+
+        .Child {
+            position: absolute;
+            width: 170px;
+            height: 200px;
+            border: 5px solid black;
+            background-color: #fed837;
+            border-radius: 50% 50% 50% 50%/ 50% 50% 60% 60%;
+            border-bottom: unset;
+        }
+
+        .Child::after {
+            content: '';
+            position: absolute;
+            top: 192px;
+            left: 103px;
+            border: 5px solid black;
+            /* transform: rotate(7deg); */
+            width: 20px;
+            height: 35px;
+            border-radius: 30px 30px 60px 60px;
+            border-left: none;
+            border-top: none;
+            background-color: #fed837;
+            /* border-bottom: none; */
+        }
+
+        .Child::Before {
+            content: '';
+            position: absolute;
+            top: 192px;
+            left: 45px;
+            border: 5px solid black;
+            /* transform: rotate(-7deg); */
+            width: 20px;
+            height: 35px;
+            border-radius: 30px 30px 60px 60px;
+            border-right: none;
+            border-top: none;
+            background-color: #fed837;
+            /* border-bottom: none; */
+        }
+
+        .Child1 {
+            position: absolute;
+            top: 229px;
+            left: 57px;
+            width: 60px;
+            height: 40px;
+            border: 5px solid black;
+            background-color: #9ba0b3;
+            border-radius: 5px 5px 15px 15px;
+        }
+
+        .Child1::after {
+            content: '';
+            position: absolute;
+            border: 5px solid black;
+            top: 5px;
+            right: 0.4px;
+            width: 60px;
+            height: 4px;
+            border-left: none;
+            border-right: none;
+            background-color: #9ba0b3;
+        }
+
+        .Child1::before {
+            content: '';
+            position: absolute;
+            border: 2.5px solid black;
+            top: 25px;
+            right: 0.4px;
+            width: 60px;
+            height: 0px;
+            border-left: none;
+            border-right: none;
+            background-color: #9ba0b3;
+        }
+
+        .Inner_Child {
+            position: absolute;
+            border: 5px solid black;
+            top: 39.5px;
+            left: 8px;
+            width: 35px;
+            height: 10px;
+            border-radius: 6px 6px 20px 20px;
+            background-color: #9ba0b3;
+
+        }
+
+        .Child3 {
+            position: absolute;
+            top: 106px;
+            left: 63px;
+            /* border: 1px solid black; */
+            height: 120px;
+            width: 55px;
+        }
+
+        .Inner_Child1 {
+            position: absolute;
+            background-color: #3598c5;
+            top: -98px;
+            left: 3px;
+            border-radius: 0px 90px 0px 0px;
+            border: 1px solid black;
+            height: 92px;
+            width: 12px;
+            z-index: 2;
+        }
+
+        .Inner_Child2 {
+            position: absolute;
+            background-color: #54c4f7;
+            top: -98px;
+            left: 17px;
+            border-radius: 100px 0px 0px 0px;
+            border: 1px solid black;
+            height: 92px;
+            width: 12px;
+            z-index: 2;
+        }
+
+        .Inner_Child3 {
+            position: absolute;
+            background-color: #3d97c0;
+            top: -98px;
+            left: 30px;
+            border-radius: 0px 100px 0px 0px;
+            border: 1px solid black;
+            height: 92px;
+            width: 12px;
+            z-index: 2;
+        }
+
+        .Inner_Child4 {
+            position: absolute;
+            background-color: #37a2d1;
+            top: -98px;
+            left: 43px;
+            border-radius: 100px 0px 0px 0px;
+            border: 1px solid black;
+            height: 92px;
+            width: 12px;
+            z-index: 2;
+        }
+
+        .Inner_Child5 {
+            position: absolute;
+            top: -160px;
+            left: -1px;
+            z-index: 1;
+            background-color: #e3b174;
+            width: 60px;
+            height: 75px;
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            /* border-left: 2px solid transparent;
+            border-right: 2px solid transparent;
+            border-top: 10px solid #e3b174; */
+        }
+        .Inner_Child6 {
+            position: absolute;
+            top: -160px;
+            left: 14px;
+            z-index: 1;
+            background-color: #81827e;
+            width: 28px;
+            height: 35px;
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+            border: 1px solid black;
+            
+        }
+        .parent1{
+            position: absolute;
+            top: 51%;
+            left: 45%;
+            width: 340px;
+            height: 350px;
+            z-index: -1;
+            background-color: #01d9fe;
+            border-radius: 50%;
+        }
+        .BChild1{
+            position: absolute;
+            left: 50px;
+            border: 3px solid black;
+            width: 0px;
+            height: 30px;
+            transform: rotate(-59deg);
+            border-radius: 20px;
+
+        }
+        .BChild2{
+            position: absolute;
+            left: 95px;
+            top: -30px;
+            border: 3px solid black;
+            width: 0px;
+            height: 30px;
+            transform: rotate(-37deg);
+            border-radius: 20px;
+
+        }.BChild3{
+            position: absolute;
+            left: 155px;
+            top: -45px;
+            border: 3px solid black;
+            width: 0px;
+            height: 30px;
+            border-radius: 20px;
+        }.BChild4{
+            position: absolute;
+            left: 225px;
+            top: -30px;
+            border: 3px solid black;
+            width: 0px;
+            height: 30px;
+            border-radius: 20px;
+            transform: rotate(40deg);
+        }
+        .BChild5{
+            position: absolute;
+            left: 255px;
+            top: 2px;
+            border: 3px solid black;
+            width: 0px;
+            height: 30px;
+            border-radius: 20px;
+            transform: rotate(59deg);
+        }
+        .BChild6{
+            position: absolute;
+            border: 7px solid black;
+            border-radius: 50px;
+        }
+        .BChild7{
+            position: absolute;
+            top: 15%;
+            left: -15%;
+            border: 4px solid black;
+            border-radius: 50px;
+        }
+        .BChild8{
+            position: absolute;
+            top: 75%;
+            right: 1px;
+            border: 4px solid black;
+            border-radius: 50px;
+        }.BChild9{
+            position: absolute;
+            top: 85%;
+            left: -10px;
+            border: 4px solid black;
+            border-radius: 50px;
+        }
+        .BChild10{
+            position: absolute;
+            top: 15%;
+            right: -10px;
+            border: 4px solid black;
+            border-radius: 50px;
+        }.BChild11{
+            position: absolute;
+            background-color: black;
+            width: 15px;
+            height: 15px;
+            top: 75%;
+            left: -80px;
+            clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 66% 79%, 35% 80%, 35% 50%, 10% 50%);
+        }
+        .BChild12{
+            position: absolute;
+            background-color: black;
+            width: 15px;
+            height: 15px;
+            top: 15%;
+            right: -50px;
+            clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 66% 79%, 35% 80%, 35% 50%, 10% 50%);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="Grand_Parent">
+        <div class="Parent">
+            <div class="Child"></div>
+            <div class="Child1">
+                <div class="Inner_Child"></div>
+                <div class="Inner_Child1"></div>
+                <div class="Inner_Child2"></div>
+                <div class="Inner_Child3"></div>
+                <div class="Inner_Child4"></div>
+                <div class="Inner_Child5"></div>
+                <div class="Inner_Child6"></div>
+            </div>
+            <div class="Child3"></div>
+        </div>
+        <div class="parent1">
+            <div class="BChild1"></div>
+            <div class="BChild2"></div>
+            <div class="BChild3"></div>
+            <div class="BChild4"></div>
+            <div class="BChild5"></div>
+            <div class="BChild6"></div>
+            <div class="BChild7"></div>
+            <div class="BChild8"></div>
+            <div class="BChild9"></div>
+            <div class="BChild10"></div>
+            <div class="BChild11"></div>
+            <div class="BChild12"></div>
+        </div>
+    </div>
+</body>
+
+</html>

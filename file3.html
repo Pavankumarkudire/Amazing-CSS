@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .child {
+            position: absolute;
+            border: 10px solid black;
+            width: 200px;
+            border-radius: 50%;
+            height: 200px;
+            top: 27%;
+            left: 12%;
+            z-index: 2;
+            border-radius: 100% 100% 98% 98%;
+            background-color: #e5e506;
+            border-bottom: outset;
+        }
+
+        .Ch {
+            position: absolute;
+            top: 163px;
+            left: 20px;
+            z-index: 2;
+            transform: rotate(-32deg);
+            border: 13px solid black;
+            width: 30px;
+            height: 90px;
+            border-radius: 50%;
+            border-top: none;
+            border-bottom: none;
+            border-left: none;
+        }
+
+        .Ch1 {
+            position: absolute;
+            top: 163px;
+            right: 20px;
+            z-index: 2;
+            border: 15px solid black;
+            transform: rotate(34deg);
+            width: 30px;
+            height: 90px;
+            border-radius: 50%;
+            border-top: none;
+            border-bottom: none;
+            border-right: none;
+        }
+
+        .Ch2 {
+            border: 9px solid black;
+            width: 55px;
+            position: absolute;
+            top: 230px;
+            left: 63.5px;
+            border-radius: 10px;
+        }
+
+        .Ch3 {
+            position: absolute;
+            background-color: #e5e506;
+            top: 180px;
+            left: 60px;
+            width: 80px;
+            height: 50px;
+        }
+
+        .Ch4 {
+            position: absolute;
+            top: 255px;
+            left: 62px;
+            width: 55px;
+            height: 3px;
+            border: 10px solid black;
+            border-radius: 50px;
+        }
+
+        .Ch5 {
+            position: absolute;
+            top: 285px;
+            left: 67px;
+            width: 43px;
+            height: 3px;
+            border: 10px solid black;
+            border-radius: 50px;
+        }
+
+        .Ch6 {
+            position: absolute;
+            top: 13px;
+            right: 25px;
+            z-index: 2;
+            transform: rotate(-32deg);
+            border: 13px solid black;
+            width: 60px;
+            height: 120px;
+            border-radius: 50%;
+            border-top: none;
+            border-bottom: none;
+            border-left: none;
+        }
+        .child1 .Bo1{
+            position: absolute;
+            top: 180px;
+            left: 440px;
+            transform: rotate(60deg);
+            height: 60px;
+            border: 7px solid black;
+            border-radius: 50px;
+        }
+        .child1 .Bo2{
+            position: absolute;
+            top: 100px;
+            left: 390px;
+            transform: rotate(40deg);
+            height: 60px;
+            border: 7px solid black;
+            border-radius: 50px;
+        }
+        .child1 .Bo3{
+            position: absolute;
+            top: 60px;
+            left: 270px;
+            height: 60px;
+            border: 7px solid black;
+            border-radius: 50px;
+        }.child1 .Bo4{
+            position: absolute;
+            top: 100px;
+            left: 150px;
+            transform: rotate(-40deg);
+            height: 60px;
+            border: 7px solid black;
+            border-radius: 50px;
+        }.child1 .Bo5{
+            position: absolute;
+            top: 180px;
+            left: 100px;
+            transform: rotate(-60deg);
+            height: 60px;
+            border: 7px solid black;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class='parent'>
+        <div class='child'>
+            <span class="Ch"></span>
+            <span class="Ch1"></span>
+            <span class="Ch2"></span>
+            <span class="Ch3"></span>
+            <span class="Ch4"></span>
+            <span class="Ch5"></span>
+            <span class="Ch6"></span>
+        </div>
+        <div class="child1">
+            <span class="Bo1"></span>
+            <span class="Bo2"></span>
+            <span class="Bo3"></span>
+            <span class="Bo4"></span>
+            <span class="Bo5"></span>
+        </div>
+    </div>
+</body>
+
+</html>

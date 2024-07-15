@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer_circle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: conic-gradient(
+                #f3a423 0 28%,
+                #fbfffc 28% 33%,
+                #e82069 33% 62%,
+                #fbfffc 62% 70%,
+                #0ca9a0 70% 95%,
+                #fbfffc 95% 100% );
+            border-radius: 50%;
+        }
+
+        .outer_circle::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #fbfffc;
+        }
+
+        .outer_circle::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #fbfffc;
+        }
+
+        .Inner_circle {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 27%;
+            left: 12%;
+            z-index: 2;
+            border-radius: 50%;
+            background-color: #0ca9a0;
+
+        }
+
+        .Inner_circle::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: -30%;
+            left: 260%;
+            z-index: 2;
+            border-radius: 50%;
+            background-color: #f3a423;
+        }
+
+        .Inner_circle::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 215%;
+            left: 175%;
+            z-index: 2;
+            border-radius: 50%;
+            background-color: #e82069;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer_circle">
+        <div class="Inner_circle"></div>
+    </div>
+</body>
+
+</html>
